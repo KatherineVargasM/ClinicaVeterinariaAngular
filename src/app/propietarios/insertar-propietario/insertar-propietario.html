@@ -1,0 +1,35 @@
+<div style="padding: 20px; max-width: 600px; margin: 0 auto;">
+  <h2>Registrar Nuevo Propietario</h2>
+
+  <form [formGroup]="formulario" (ngSubmit)="guardar()" style="display: flex; flex-direction: column; gap: 15px;">
+    
+    <div>
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Nombre:</label>
+      <input type="text" formControlName="nombre" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div>
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Teléfono:</label>
+      <input type="text" formControlName="telefono" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div>
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Correo:</label>
+      <input type="email" formControlName="correo" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div>
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Dirección:</label>
+      <input type="text" formControlName="direccion" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <button type="submit" [disabled]="formulario.invalid" style="background-color: #51b5ae; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+        Guardar
+      </button>
+      <button type="button" routerLink="/" style="background-color: #ccc; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<div style="padding: 20px;">
+  <h2>Lista de Propietarios</h2>
+  
+  <button routerLink="/insertar" style="background-color: #51b5ae; color: white; padding: 10px 15px; border: none; border-radius: 5px; margin-bottom: 20px; cursor: pointer; font-weight: bold;">
+    Agregar Nuevo Propietario
+  </button>
+
+  <table style="width: 100%; border-collapse: collapse; text-align: left;">
+    <thead>
+      <tr style="background-color: #5dc1b9; color: white;">
+        <th style="padding: 12px; border: 1px solid #ddd;">ID</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">Nombre</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">Teléfono</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">Correo</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">Dirección</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (propietario of lista; track propietario.id) {
+        <tr>
+          <td style="padding: 12px; border: 1px solid #ddd;">{{ propietario.id }}</td>
+          <td style="padding: 12px; border: 1px solid #ddd;">{{ propietario.nombre }}</td>
+          <td style="padding: 12px; border: 1px solid #ddd;">{{ propietario.telefono }}</td>
+          <td style="padding: 12px; border: 1px solid #ddd;">{{ propietario.correo }}</td>
+          <td style="padding: 12px; border: 1px solid #ddd;">{{ propietario.direccion }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
